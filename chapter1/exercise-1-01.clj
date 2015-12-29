@@ -16,9 +16,9 @@
 ;;   2) if n in S, then n+3 in S.
 ;;
 ;; rules of inference:
-;;               n in S
-;;    ------   ----------
-;;    2 in S   (n+3) in S
+;;              n in S
+;;   ------   ----------
+;;   2 in S   (n+3) in S
 ;;
 ;; ------------------------------------------------------------------------------
 ;; Exercise 1.1.2
@@ -37,9 +37,9 @@
 ;;   3) if n in S, then n+3 in S.
 ;;
 ;; rules of inference:
-;;               n in S       n in S
-;;    ------   ----------   ----------
-;;    1 in S   (n+2) in S   (n+3) in S
+;;              n in S       n in S
+;;   ------   ----------   ----------
+;;   1 in S   (n+2) in S   (n+3) in S
 ;;
 ;; ------------------------------------------------------------------------------
 ;; Exercise 1.1.3
@@ -69,3 +69,12 @@
 ;;   1) (n,m)=(0,0), or
 ;;   2) (n-1,(m-2n+1) in S.
 ;;
+;; bottom-up: define the set S to be the smallest set contained in N and
+;; satisfying the following two properties:
+;;   1) (0,0) in S, and
+;;   2) if (n,m) in S, then (n+1,m+2n+1) in S.
+;;
+;; rules of inference:
+;;                  (n,m) in S
+;;   ----------  -----------------
+;;   (0,0) in S  (n+1,m+2n+1) in S
