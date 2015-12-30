@@ -5,7 +5,7 @@
 ;; of left and right parentheses in e.
 ;;
 ;; Proof: The proof is by structural induction on the number k of left and right
-;; parentheses in e, where k is the number of symbolic expressions in e.
+;; parentheses in e, where k is the number of parentheses of symbolic expressions in e.
 ;; The induction hypothesis IH(k) is that any symbolic expression e having 
 ;; parentheses <= k has a matching number of left and right parentheses.
 ;;
@@ -21,7 +21,7 @@
 ;;       and thus has a matching number (0) of left and right parentheses.
 ;;    b) e could be of the form (λ (Identifier) LcExp), where λ is a symbol containing
 ;;       no parentheses, Identifier is an argument with matching parentheses and LcExp
-;;       is another lambda expression. The entire form is surrounded by a matching left
+;;       is another lambda expression. The entire form is surrounded by matching left
 ;;       and right parentheses, as is Identifier. Therefore this case holds.
 ;;    c) e could be of the form (LcExp LcExp). This form is surrounded by matching parentheses
 ;;       and each LcExp must have fewer parentheses than e. Since e has <= k+2
