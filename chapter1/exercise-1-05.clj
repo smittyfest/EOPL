@@ -19,4 +19,12 @@
 ;;
 ;;    a) e could be of the form 'Identifier', where identifiers have no parentheses,
 ;;       and thus has a matching number (0) of left and right parentheses.
-;;    b) e could be of the form (λ (Identifier) LcExp)
+;;    b) e could be of the form (λ (Identifier) LcExp), where λ is a symbol containing
+;;       no parentheses, Identifier is an argument with matching parentheses and LcExp
+;;       is another lambda expression. The entire form is surrounded by a matching left
+;;       and right parentheses, as is Identifier. Therefore this case holds.
+;;    c) e could be of the form (LcExp LcExp). This form is surrounded by matching parentheses
+;;       and each LcExp must have fewer sub-expressions than e. Since e has <= k+1
+;;       sub-expressions, both LcExp instances must have <= k sub-expressions. Therefore
+;;       they are covered by IH(k) and they must have a matching number of left and right
+;;       parentheses.
