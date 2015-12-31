@@ -24,3 +24,7 @@
 (is (= (nth-elem '(a b c d e) 0) 'a))
 (is (= (nth-elem '(a b c d e) 8) nil))
 
+;; Without a check for an empty list, the function
+;; will attempt to retrieve the car of an empty list,
+;; returning nil in this case instead.
+
