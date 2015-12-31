@@ -17,5 +17,10 @@
 ;;
 ;; run some unit-tests
 ;;
+(is (= (nth-elem '(a b c d e) 4) 'e))
 (is (= (nth-elem '(a b c d e) 3) 'd))
+(is (= (nth-elem '(a b c d e) 2) 'c))
+(is (= (nth-elem '(a b c d e) 1) 'b))
+(is (= (nth-elem '(a b c d e) 0) 'a))
+(is (= (nth-elem '(a b c d e) 8) nil))
 
