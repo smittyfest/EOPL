@@ -9,7 +9,8 @@
 (defn nth-elem
   {:doc "Return nth-element of the list"}
   [lst n]
-  (if (> n (count lst) ) (printf "Request was for element %d, but List has %d elements\n" n, (count lst)))
+  (if (> n (count lst)) 
+    (printf "Request was for element %d, but List has %d elements\n" n, (count lst)))
   (loop [cnt n tmp lst]
     (if (zero? cnt)
     (first tmp)
