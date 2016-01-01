@@ -6,14 +6,14 @@
   {:doc "Remove first occurrence of s from the list xs"}
   [xs s]
   (if (empty? xs)
-  '()
-  (loop [tmp xs]
-    (if (= (s (first tmp)))
-      (rest tmp)
-    (recur (cons (first tmp) (remove-first s (rest tmp))))))))
-
+    ()
+    (if (= s (first xs))
+      (rest xs)
+        (cons (first xs) (remove-first (rest xs) s)))))
 ;;
 ;; run some unit-tests
 ;;
 (is (= (remove-first '(a b c) 'a) '(b c)))
-(is (= (remove-first '() 'a) '()))
+(is (= (remove-first '(a b c) 'e) '(a b c)))
+(is (= (remove-first () 'a) ()))
+(is (= (remove-first '(a b c a b c) 'c) '(a b a b c)))
