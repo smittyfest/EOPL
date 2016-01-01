@@ -16,3 +16,4 @@
 ;; run some unit-tests
 ;;
 (is (= (remove-first '(a b c) 'a) '(b c)))
+(is (= (remove-first '() 'a) '()))
