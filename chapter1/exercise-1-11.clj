@@ -24,7 +24,7 @@
   [old new exp]
   (if (symbol? exp)
     (if (= exp old) new exp)
-    (subst old new exp)))
+    (subst old new exp))) ;; guaranteed to halt because the grammar declares exp ::= symbol | s-list
 ;;
 ;; run some unit-tests
 ;;
