@@ -17,12 +17,12 @@
   {:doc "Return a new S-List with each occurrence of 'old' replaced by 'new'"}
   [old new lst]
   (if (empty? lst)
-      ()
-      (map (fn [exp]
-        (if (symbol? exp)
-          (if (= old exp) new exp)
-        (subst old new exp)))
-      lst)))
+    ()
+    (map (fn [exp]
+      (if (symbol? exp)
+        (if (= old exp) new exp)
+      (subst old new exp)))
+    lst)))
 
 (is (= (subst 'b 'a ()) ()))
 (is (= (subst 'b 'a '(b b a a)) '(a a a a)))
