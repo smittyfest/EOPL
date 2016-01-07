@@ -23,7 +23,9 @@
         (if (= old exp) new exp)
       (subst old new exp)))
     lst)))
-
+;;
+;; unit-tests
+;;
 (is (= (subst 'b 'a ()) ()))
 (is (= (subst 'b 'a '(b b a a)) '(a a a a)))
 (is (= (subst 'b 'a '(a a a a)) '(a a a a)))
