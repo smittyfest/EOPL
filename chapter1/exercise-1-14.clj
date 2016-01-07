@@ -1,8 +1,8 @@
 ;; ==============================================================================
 ;;
-;; @@@@@@@@@@@@@@@@@@@@
-;; @ Exercise 1.14[*] @
-;; @@@@@@@@@@@@@@@@@@@@
+;; @@@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 1.14[**] @
+;; @@@@@@@@@@@@@@@@@@@@@
 ;;
 ;; The Induction hypothesis IH(n) states that partial-vector-sum correctly returns the sum of the elements of
 ;; a Vector[Int].
