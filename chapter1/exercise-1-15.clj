@@ -16,3 +16,4 @@
 (is (= (duple 5 0) ()))
 (is (= (duple 5 3) '(5 5 5)))
 (is (= (duple 'a 10) '(a a a a a a a a a a)))
+(is (= (duple '(ha ha) 4) '((ha ha) (ha ha) (ha ha) (ha ha))))
