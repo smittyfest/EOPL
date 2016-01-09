@@ -1,3 +1,9 @@
+;; ==============================================================================
+;;
+;; @@@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 1.19[**] @
+;; @@@@@@@@@@@@@@@@@@@@@
+;;
 (ns eopl.ch01 (:use clojure.test))
 
 (declare list-set-accu)
@@ -15,7 +21,7 @@
     (cons x (rest xs))
     (cons (first xs) (list-set-accu (inc accu) n x (rest xs)))))
 ;;
-;; run some unit-tests
+;; unit-tests
 ;;
 (is (= (list-set 3 'z ()) ()))
 (is (= (list-set 3 'a '(1 2)) '(1 2)))
