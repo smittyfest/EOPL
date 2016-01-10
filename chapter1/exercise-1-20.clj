@@ -5,23 +5,13 @@
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
 (ns eopl.ch01 (:use clojure.test))
-(declare counter)
 (defn count-occurrences
   {:doc "Return the number of occurrences of x in xs"}
   [x xs]
-  (if (empty? xs) 0
-    (counter 0 x xs)))
-
-(defn- counter
-  {:doc "Accumulates count totals for x in xs"}
-  [accu x xs]
-  (cond
-    (empty? xs) accu
-    (symbol? (first xs))
-      (if (= x (first xs))
-        (counter (inc accu) x (rest xs))
-        (counter accu x (rest xs)))
-    :else (counter accu x (first xs))))
+  (reduce (fn [accu i]
+    (if (symbol? i)
+      (if (= x i) (inc accu) accu)
+      (+ accu (count-occurrences x i)))) 0 xs))
 ;;
 ;; unit-tests
 ;;
