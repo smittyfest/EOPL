@@ -22,3 +22,8 @@
     (empty? ys) xs
     (pred (first xs) (first ys)) (cons (first xs) (merge (rest xs) ys pred))
     :else (cons (first ys) (merge xs (rest ys) pred))))
+;;
+;; unit-tests
+;;
+(is (= (sort-by-predicate '(8 2 5 2 3) <) '(2 2 3 5 8)))
+(is (= (sort-by-predicate '(8 2 5 2 3) >) '(8 5 3 2 2)))
