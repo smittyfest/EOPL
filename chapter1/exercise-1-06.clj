@@ -13,9 +13,8 @@
     (if (zero? cnt) 
     (first tmp) 
     (recur (dec cnt) (rest tmp)))))
-
 ;;
-;; run some unit-tests
+;; unit-tests
 ;;
 (is (= (nth-elem '(a b c d e) 4) 'e))
 (is (= (nth-elem '(a b c d e) 3) 'd))
@@ -27,4 +26,3 @@
 ;; Without a check for an empty list, the function
 ;; will attempt to retrieve the car of an empty list,
 ;; returning nil in this case instead.
-
