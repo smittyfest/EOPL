@@ -4,6 +4,8 @@
 ;; @ Exercise 1.31[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Bintree ::= Int | (Symbol Bintree Bintree)
+;;
 (ns eopl.ch01 (:use clojure.test))
 
 (defn leaf
