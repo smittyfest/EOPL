@@ -18,3 +18,8 @@
   {:doc "handles accumulating count and adding it to list"}
   [x xs]
   (cons x (map (fn [i] (cons (+ (first i) 1) (rest i))) xs)))
+;;
+;; unit-tests
+;;
+(is (= (number-elements ()) ()))
+(is (= (number-elements '('a 'b 'c)) '((0 'a) (1 'b) (2 'c))))
