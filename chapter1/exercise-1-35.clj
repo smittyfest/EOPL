@@ -52,6 +52,7 @@
   ;; unit-tests
   ;;
   (is (= '(foo (bar (0) (1))(baz (2) (quxx (3) (4)))))
-          (number-leaves (interior-node 'foo (interior-node 'bar (leaf 26) (leaf 12))
-                                             (interior-node 'baz (leaf 11)
-                                             (interior-node 'quux (leaf 117) (leaf 14))))))
+    (number-leaves (interior-node 'foo 
+      (interior-node 'bar (leaf 26) (leaf 12))
+        (interior-node 'baz (leaf 11)
+          (interior-node 'quux (leaf 117) (leaf 14))))))
