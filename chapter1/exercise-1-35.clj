@@ -38,21 +38,47 @@
 
 (defn number-leaves
   {:doc "returns a bintree with the contents of the leaves numbered starting from zero"}
-  [tree]
-  (accumulate-leaves tree 0))
+  ([tree] (number-leaves tree 0))
+  ([tree accu]
+   (if (leaf? tree)
+     (leaf accu)
+     (interior-node
+       (contents-of tree)
+       (number-leaves (lson tree) accu)
+       (number-leaves (rson tree)
+         (+ accu (accumulate-leaves (lson tree))))))))
 
 (defn accumulate-leaves
   {:doc "iterates over the nodes of a tree, building a new tree with the accumulated values"}
+  [tree]
+  (if (leaf? tree) 1
+    (+ (accumulate-leaves (lson tree))
+      (accumulate-leaves (rson tree)))))
+;;
+;; unit-tests
+;;
+(is (= (number-leaves (leaf 12)) 0))
+(is (= (number-leaves (interior-node 'hello 2 4)) '(hello 0 1)))
+(is (= (number-leaves (interior-node 'hello 4 (interior-node 'goodbye 8 9))) '(hello 0 (goodbye 1 2))))
+(is (= (number-leaves
+         (interior-node 'hello (interior-node 'kitty (interior-node 'naughty 10 20) (interior-node 'nice 30 40))
+         (interior-node 'puppy (interior-node 'sleepy 50 60) (interior-node 'playful 70 80))))
+           '(hello (kitty (naughty 0 1) (nice 2 3)) (puppy (sleepy 4 5) (playful 6 7)))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; first attempt          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(declare accumulate-leaves-fa)
+(defn number-leaves-fa
+  {:doc "returns a bintree with the contents of the leaves numbered starting from zero"}
+  [tree]
+  (accumulate-leaves-fa tree 0))
+
+(defn accumulate-leaves-fa
+  {:doc "iterates over the nodes of a tree, building a new tree with the accumulated values"}
   [tree accu]
   (if (leaf? tree) (cons (inc accu) (list (leaf accu)))
-  (let [[left-accu & left-tree] (accumulate-leaves (lson tree) accu)
-        [right-accu & right-tree] (accumulate-leaves (rson tree) left-accu)]
+  (let [[left-accu & left-tree] (accumulate-leaves-fa (lson tree) accu)
+        [right-accu & right-tree] (accumulate-leaves-fa (rson tree) left-accu)]
     (cons right-accu (interior-node (contents-of tree) left-tree right-tree)))))
-  ;;
-  ;; unit-tests
-  ;;
-  (is (= '(foo (bar (0) (1))(baz (2) (quxx (3) (4)))))
-    (number-leaves (interior-node 'foo 
-      (interior-node 'bar (leaf 26) (leaf 12))
-        (interior-node 'baz (leaf 11)
-          (interior-node 'quux (leaf 117) (leaf 14))))))
