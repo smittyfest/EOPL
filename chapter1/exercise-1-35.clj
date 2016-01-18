@@ -40,8 +40,7 @@
   {:doc "returns a bintree with the contents of the leaves numbered starting from zero"}
   ([tree] (number-leaves tree 0))
   ([tree accu]
-   (if (leaf? tree)
-     (leaf accu)
+   (if (leaf? tree) (leaf accu)
      (interior-node
        (contents-of tree)
        (number-leaves (lson tree) accu)
