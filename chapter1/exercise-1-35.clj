@@ -30,8 +30,8 @@
   {:doc "returns the contents of an interior-node or leaf"}
   [node]
   (cond
-    (leaf? node) node
     (empty? node) ()
+    (leaf? node) node
     :else (first node)))
 
 (declare accumulate-leaves)
