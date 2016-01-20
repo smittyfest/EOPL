@@ -15,8 +15,12 @@
 ;; This implementation has constant access time for any integer, but the space complexity increases linearly as n
 ;; becomes large, resulting in poor memory-efficiency for large values of n.
 
-;; Scheme representation
+;; Clojure representation
 (def zero 0)
 (defn is-zero? [n] (zero? n))
 (defn succ [n] (+ n 1))
 (defn pred [n] (- n 1))
+;; Creates a new abstraction layer that delegates the implementation to Clojure.
+;; This will help clients remain unaffected if we decide to change the representation of the
+;; data specification for any reason.
+;; The performance of this implementation is similar to that of Clojure and the JVM.
