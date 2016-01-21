@@ -36,3 +36,4 @@
 (is (= (is-zero? ()) true))
 (is (= (successor ()) '(1)))
 (is (= (predecessor '(1)) ()))
+(is (= (successor (successor (successor ()))) '(3)))
