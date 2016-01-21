@@ -30,6 +30,18 @@
     (zero? (first n)) (cons (- BASE 1) (predecessor (rest n)))
     (and (= (first n) 1) (is-zero? (rest n))) ()
     :else (cons (- (first n) 1) (rest n))))
+
+;; constants
+(def one (successor ()))
+(def two (successor (successor ())))
+(def three (successor (successor (successor ()))))
+(def four (successor (successor (successor (successor ())))))
+(def five (successor (successor (successor (successor (successor ()))))))
+(def six (successor (successor (successor (successor (successor (successor ())))))))
+(def seven (successor (successor (successor (successor (successor (successor (successor ()))))))))
+(def eight (successor (successor (successor (successor (successor (successor (successor (successor ())))))))))
+(def nine (successor (successor (successor (successor (successor (successor (successor (successor (successor ()))))))))))
+(def ten (successor (successor (successor (successor (successor (successor (successor (successor (successor (successor ())))))))))))
 ;;
 ;; unit-tests
 ;;
