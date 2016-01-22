@@ -26,3 +26,9 @@
 ;; The performance of this implementation is similar to that of Clojure and the JVM.
 
 ;; Bigint representation
+(def BASE 10)
+(def zero ()) ;; returns bigint representation of zero
+(defn is-zero?
+  {:doc "returns true if n is equal to the bigint representation of zero"}
+  [n]
+  (empty? n))
