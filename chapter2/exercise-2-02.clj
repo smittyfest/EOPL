@@ -39,3 +39,10 @@
     (is-zero? n) '(1)
     (= (inc (first n)) BASE) (cons 0 (successor (rest n)))
     :else (cons (+ (first n) 1) (rest n))))
+(defn predecessor
+  {:doc "returns the predecessor to n in bigint representation"}
+  [n]
+  (cond
+    (zero? (first n)) (cons (- BASE 1) (predecessor (rest n)))
+    (and (= (first n) 1) (is-zero? (rest n))) ()
+    :else (cons (- (first n) 1) (rest n))))
