@@ -32,3 +32,10 @@
   {:doc "returns true if n is equal to the bigint representation of zero"}
   [n]
   (empty? n))
+(defn successor
+  {:doc "returns the successor to n in bigint representation"}
+  [n]
+  (cond
+    (is-zero? n) '(1)
+    (= (inc (first n)) BASE) (cons 0 (successor (rest n)))
+    :else (cons (+ (first n) 1) (rest n))))
