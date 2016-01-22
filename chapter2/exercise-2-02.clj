@@ -24,3 +24,5 @@
 ;; This will help clients remain unaffected if we decide to change the representation of the
 ;; data specification for any reason.
 ;; The performance of this implementation is similar to that of Clojure and the JVM.
+
+;; Bigint representation
