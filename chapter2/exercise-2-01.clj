@@ -31,6 +31,16 @@
     (and (= (first n) 1) (is-zero? (rest n))) ()
     :else (cons (- (first n) 1) (rest n))))
 
+;; more functions
+(defn plus
+  {:doc "adds two integers"}
+  [x y]
+  
+(defn multiply
+  {:doc "multiplies two integers"}
+  [x y]
+  
+  
 ;; constants
 (def one (successor ()))
 (def two (successor (successor ())))
