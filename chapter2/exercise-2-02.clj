@@ -46,3 +46,6 @@
     (zero? (first n)) (cons (- BASE 1) (predecessor (rest n)))
     (and (= (first n) 1) (is-zero? (rest n))) ()
     :else (cons (- (first n) 1) (rest n))))
+;; The bigint representation is more space-efficient than both the unary representaion
+;; and the Clojure-delegated representation for large integers.
+;; The time-complexity
