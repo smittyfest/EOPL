@@ -45,6 +45,11 @@
     (or (is-zero? x) (is-zero? y)) zero
     (is-zero? (predecessor x)) y
     :else (plus y (multiply (predecessor x) y))))  
+ 
+;; factorial
+(defn fact
+  {:doc "returns the factorial of n"}
+  [n]
   
 ;; constants
 (def one (successor ()))
