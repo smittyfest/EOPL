@@ -90,3 +90,30 @@
 (is (= (predecessor '(3)) '(2)))
 (is (= (predecessor '(2)) '(1)))
 (is (= (predecessor '(1)) ()))
+(is (= (plus '(2) '(2)) '(4)))
+(is (= (plus '(5) '(3)) '(8)))
+(is (= (multiply '(4) '(2)) '(8)))
+;; factorial times
+(println (time (fact ())))
+;; => "Elapsed time: 0.045669 msecs" (1)
+(println( time (fact '(1))))
+;; => "Elapsed time: 0.036646 msecs" (1)
+(println(time (fact '(2))))
+;; => "Elapsed time: 0.07091 msecs" (2)
+(println (time (fact '(3))))
+;; => "Elapsed time: 0.132475 msecs" (6)
+(println (time (fact '(4))))
+;; => "Elapsed time: 0.3064 msecs" (4 2)
+(println (time (fact '(5))))
+;; => "Elapsed time: 1.086547 msecs" (0 2 1)
+(println (time (fact '(6))))
+;; => "Elapsed time: 3.584692 msecs" (0 2 7)
+(println (time (fact '(7))))
+;; => "Elapsed time: 8.953824 msecs" (0 4 0 5)
+(println (time (fact '(8))))
+;; => "Elapsed time: 20.333307 msecs" (0 2 3 0 4)
+(println (time (fact '(9))))
+;; => Exception in thread "main" java.lang.StackOverflowError
+
+;; This implementation is unsatisfactory since it leads to a stack-overflow.
+;; Next implementation uses tail-recursion to preserve the stack.
