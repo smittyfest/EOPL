@@ -50,7 +50,9 @@
 (defn fact
   {:doc "returns the factorial of n"}
   [n]
-  
+  (if (or (is-zero? n) (is-zero? (predecessor n))) (successor zero)
+    (multiply n (fact (predecessor n)))))
+
 ;; constants
 (def one (successor ()))
 (def two (successor (successor ())))
