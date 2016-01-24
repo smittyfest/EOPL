@@ -41,7 +41,10 @@
 (defn multiply
   {:doc "multiplies two integers"}
   [x y]
-  
+  (cond
+    (or (is-zero? x) (is-zero? y)) zero
+    (is-zero? (predecessor x)) y
+    :else (plus y (multiply (predecessor x) y))))  
   
 ;; constants
 (def one (successor ()))
