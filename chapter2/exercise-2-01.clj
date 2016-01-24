@@ -35,7 +35,9 @@
 (defn plus
   {:doc "adds two integers"}
   [x y]
-  
+  (if (is-zero? x) y
+    (successor (plus (predecessor x) y))))
+
 (defn multiply
   {:doc "multiplies two integers"}
   [x y]
