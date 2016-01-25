@@ -5,3 +5,9 @@
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
 (ns eopl.ch02 (:use clojure.test))
+
+
+(defn diff
+  {:doc ""}
+  [x y]
+  (list x y))
