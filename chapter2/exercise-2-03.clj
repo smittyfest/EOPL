@@ -15,5 +15,7 @@
   [x y]
   (list 'diff x y))
 
+(def zero (diff one one))
+
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
