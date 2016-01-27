@@ -4,6 +4,8 @@
 ;; @ Exercise 2.3[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Diff-Tree ::= (one) | (diff Diff-Tree Diff-Tree)
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defn one
