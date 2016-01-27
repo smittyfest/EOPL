@@ -16,4 +16,4 @@
 (defn diff
   {:doc ""}
   [x y]
-  (list x y))
+  (list 'diff x y))
