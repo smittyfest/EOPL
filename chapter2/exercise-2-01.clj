@@ -117,3 +117,8 @@
 
 ;; This implementation is unsatisfactory since it leads to a stack-overflow.
 ;; Next implementation uses tail-recursion to preserve the stack.
+
+;; As the argument increases, the execution time dramatically increases,
+;; because we need to compute predecessors and successors on larger and larger
+;; numbers. Besides the bad performance characteristices, non-tail-recursive
+;; implementations will result in a stack-overflow for even small integers.
