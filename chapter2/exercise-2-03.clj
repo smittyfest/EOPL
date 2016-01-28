@@ -27,5 +27,10 @@
   [n]
   (diff n (one)))
 
+(defn plus
+  {:doc ""}
+  [x y]
+  (diff x (diff (zero) y)))
+
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
