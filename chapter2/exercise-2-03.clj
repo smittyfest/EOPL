@@ -32,5 +32,9 @@
   [x y]
   (diff x (diff (zero) y)))
 
+;; diff-tree evaluation
+(defn eval
+  {:doc "Evaluates a Diff-Tree expression"}
+
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
