@@ -52,8 +52,9 @@
   [n]
   (if (or (is-zero? n) (is-zero? (predecessor n))) (successor zero)
     (multiply n (fact (predecessor n)))))
-
-;; constants
+;;
+;; example constants
+;;
 (def one (successor ()))
 (def two (successor (successor ())))
 (def three (successor (successor (successor ()))))
