@@ -17,5 +17,10 @@
 
 (def zero (diff one one))
 
+(defn successor
+  {:doc ""}
+  [n]
+  (plus n (one)))
+
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
