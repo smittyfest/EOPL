@@ -18,7 +18,7 @@
 (def zero (diff one one))
 
 (defn successor
-  {:doc ""}
+  {:doc "returns the successor of an integer in diff-tree representation"}
   [n]
   (plus n (one)))
 
