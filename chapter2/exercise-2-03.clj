@@ -23,7 +23,7 @@
   (plus n (one)))
 
 (defn predecessor
-  {:doc ""}
+  {:doc "returns the predecessor of an integer in diff-tree representation"}
   [n]
   (diff n (one)))
 
