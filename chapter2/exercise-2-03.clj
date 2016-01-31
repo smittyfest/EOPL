@@ -11,7 +11,7 @@
 (def one (list 'one))
 
 (defn diff
-  {:doc ""}
+  {:doc "returns a diff-tree representation of two integers"}
   [x y]
   (list 'diff x y))
 
@@ -32,6 +32,10 @@
   [x y]
   (diff x (diff (zero) y)))
 
+(defn minus
+  {:doc "returns the difference between two diff-tree representations"}
+  [n]
+  (diff zero n))
 ;; diff-tree evaluation
 (defn eval
   {:doc "Evaluates a Diff-Tree expression"}
