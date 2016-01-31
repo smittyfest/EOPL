@@ -124,6 +124,18 @@
   (loop [x n z 1]
     (if (= x (successor zero)) '(1)
       (recur (predecessor x) (multiply z x)))))
+    
+(defn factorials []
+    (letfn [(factorial-seq [n fact]
+                           (lazy-seq
+                             (cons fact (factorial-seq (inc n) (* (inc n) fact)))))]
+      (factorial-seq 1 1)))
+
+(take 5 (factorials)) ; will return (1 2 6 24 120)
+
+(def facts (lazy-cat [1] (map * facts (iterate inc 2)))) ;; Then (take 5 facts) produces (1 2 6 24 120)
+(def facts2 (reductions * (iterate inc 1)))
+(defn factorial2 [n] (reduce * (range 1 (inc n))))
 
 ;; As the argument increases, the execution time dramatically increases,
 ;; because we need to compute predecessors and successors on larger and larger
