@@ -119,6 +119,12 @@
 ;; This implementation is unsatisfactory since it leads to a stack-overflow.
 ;; Next implementation uses tail-recursion to preserve the stack.
 
+(defn f
+  [n]
+  (loop [x n z 1]
+    (if (= x (successor zero)) '(1)
+      (recur (predecessor x) (multiply z x)))))
+
 ;; As the argument increases, the execution time dramatically increases,
 ;; because we need to compute predecessors and successors on larger and larger
 ;; numbers. Besides the bad performance characteristices, non-tail-recursive
