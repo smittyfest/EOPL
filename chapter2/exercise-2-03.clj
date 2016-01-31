@@ -28,7 +28,7 @@
   (diff n (one)))
 
 (defn plus
-  {:doc ""}
+  {:doc "adds two integers in diff-tree representation"}
   [x y]
   (diff x (diff (zero) y)))
 
