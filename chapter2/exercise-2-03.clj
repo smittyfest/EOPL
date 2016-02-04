@@ -48,6 +48,7 @@
 (defn eval
   {:doc "Evaluates a Diff-Tree expression"}
   [n]
+  (if (= (one n))
   
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
