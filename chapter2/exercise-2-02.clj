@@ -49,3 +49,5 @@
 ;; The bigint representation is more space-efficient than both the unary representaion
 ;; and the Clojure-delegated representation for large integers.
 ;; The time-complexity is pretty hideous with this implementation, far worse than the others.
+;; This would be an acceptable implementation for applications that need to store huge integers
+;; but don't necessarily need to compute them in a timely manner.
