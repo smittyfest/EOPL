@@ -36,10 +36,19 @@
   {:doc "returns the difference between two diff-tree representations"}
   [n]
   (diff zero n))
+
+(defn negate
+  {:doc ""}
+  [n]
+  (if (= (one n))
+    (diff zero one)
+    (diff (rest (rest n)) (rest n))))
+
 ;; diff-tree evaluation
 (defn eval
   {:doc "Evaluates a Diff-Tree expression"}
-
+  [n]
+  
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
 ;;
