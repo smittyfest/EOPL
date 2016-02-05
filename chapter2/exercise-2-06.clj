@@ -5,4 +5,4 @@
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Map, Set, and Tree representations of environments.
-;; Insertion-order is maintained with an auxilliary list of keys.
+;; Insertion-order is maintained with an auxiliary list of keys.
