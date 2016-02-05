@@ -141,3 +141,5 @@
 ;; because we need to compute predecessors and successors on larger and larger
 ;; numbers. Besides the bad performance characteristices, non-tail-recursive
 ;; implementations will result in a stack-overflow for even small integers.
+;; The performance does not have as much variation as the base changes. Even large
+;; changes in base result in small differences in overall performance.
