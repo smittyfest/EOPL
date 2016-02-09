@@ -16,3 +16,7 @@
   {:doc "Create a new binding in an environment"}
   [var val env]
   (cons [var val] env))
+
+(defn apply-env
+  {:doc "Retrieve a value for a given variable in an environment"}
+  [x env]
