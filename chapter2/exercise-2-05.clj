@@ -11,3 +11,8 @@
   {:doc "Representation of an empty environment"}
   []
     ())
+
+(defn extend-env
+  {:doc "Create a new binding in an environment"}
+  [var val env]
+  (cons [var val] env))
