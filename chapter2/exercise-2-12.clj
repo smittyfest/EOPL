@@ -5,3 +5,4 @@
 ;; @ Exercise 2.12[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+(ns eopl.ch02 (:use clojure.test))
