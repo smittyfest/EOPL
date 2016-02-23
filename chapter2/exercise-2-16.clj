@@ -4,3 +4,4 @@
 ;; @ Exercise 2.16[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+(ns eopl.ch02 (:use clojure.test))
