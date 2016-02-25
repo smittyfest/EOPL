@@ -16,34 +16,34 @@
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty
-  {:doc ""}
+  {:doc "Returns an empty stack"}
   []
-  (fn [x]
-    (cond
-    (= x 'empty?) true
-    :else (throw (IllegalArgumentException.)))))
+  (fn [s]
+    ()))
 
 (defn push
-  {:doc ""}
-  [stack x]
-  (fn [y]
-    (cond
-      (= y 'empty?) false
-      (= y 'top) x
-      (= y 'pop) stack
-      :else (throw (IllegalArgumentException.)))))
+  {:doc "Pushes a new element onto an existing stack"}
+  [x s]
+  (fn [x]
+    x))
 
 (defn empty?
-  {:doc ""}
-  [stack]
-  (stack 'empty?))
+  {:doc "Returns true if the given stack is empty, false otherwise"}
+  [s]
+  (= s ()))
 
 (defn pop
-  {:doc ""}
-  [stack]
-  (stack 'pop))
+  {:doc "Removes the top element from a stack"}
+  [s]
+  (fn [s] (rest s)))
 
 (defn top
-  {:doc ""}
-  [stack]
-  (stack 'top))
+  {:doc "Returns the top element of a stack"}
+  [s]
+  (first s))
+;;
+;; unit-tests
+;;
+(def empt (empty))
+(is (= (empt ()) ()))
+(is (= (empt '(1 2)) ()))
