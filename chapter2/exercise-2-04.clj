@@ -4,7 +4,7 @@
 ;; @ Exercise 2.4[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
-;; (empty s)     = ()
+;; (empty)       = ()
 ;; (push [f] s)  = (f . s)
 ;; (pop s)       = (cdr s)
 ;; (top s)       = (car s)
