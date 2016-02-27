@@ -155,32 +155,37 @@
 ;;
 ;; Test the lazy-seq factorial function
 ;;
-;;(println (time (factorial2 0)))
+;; (println (time (factorial-lazy-seq 0)))
 ;; => "Elapsed time: 0.07 msecs"  1
-;;(println (time (factorial2 1)))
+;; (println (time (factorial-lazy-seq 1)))
 ;; => "Elapsed time: 0.049 msecs" 1
-;;(println (time (factorial2 2)))
+;; (println (time (factorial-lazy-seq 2)))
 ;; => "Elapsed time: 0.057 msecs" 2
-;;(println (time (factorial2 3)))
+;; (println (time (factorial-lazy-seq 3)))
 ;; => "Elapsed time: 0.067 msecs" 6
-;;(println (time (factorial2 4)))
+;; (println (time (factorial-lazy-seq 4)))
 ;; => "Elapsed time: 0.061 msecs" 24
-;;(println (time (factorial2 5)))
+;; (println (time (factorial-lazy-seq 5)))
 ;; => "Elapsed time: 0.062 msecs" 120
-;;(println (time (factorial2 6)))
+;; (println (time (factorial-lazy-seq 6)))
 ;; => "Elapsed time: 0.065 msecs" 720
-;;(println (time (factorial2 7)))
+;; (println (time (factorial-lazy-seq 7)))
 ;; => "Elapsed time: 0.065 msecs" 5040
-;;(println (time (factorial2 8)))
+;; (println (time (factorial-lazy-seq 8)))
 ;; => "Elapsed time: 0.071 msecs" 40320
-;;(println (time (factorial2 9)))
+;; (println (time (factorial-lazy-seq 9)))
 ;; => "Elapsed time: 0.072 msecs" 362880
-;;(println (time (factorial2 10)))
+;; (println (time (factorial-lazy-seq 10)))
 ;; => "Elapsed time: 0.071 msecs" 3628800
-;;(println (time (factorial2 11)))
+;; (println (time (factorial-lazy-seq 11)))
 ;; => "Elapsed time: 0.073 msecs" 39916800
-;;(println (time (factorial2 12)))
+;; (println (time (factorial-lazy-seq 12)))
 ;; => "Elapsed time: 0.072 msecs" 479001600
+
+;; Let's try a really big number
+;; (println (time (factorial-lazy-seq 20)))
+;; => "Elapsed time: 0.088 msecs" 2432902008176640000
+
 ;;
 ;; Aww Yiss...
 ;;
