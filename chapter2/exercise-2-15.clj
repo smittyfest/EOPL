@@ -32,3 +32,8 @@
   {:doc ""}
   [exp]
     (second exp))
+
+(defn app-exp->body
+  {:doc ""}
+  [exp]
+  (first (rest (rest exp))))
