@@ -144,3 +144,46 @@
 ;; implementations will result in a stack-overflow for even small integers.
 ;; The performance does not have as much variation as the base changes. Even large
 ;; changes in base result in small differences in overall performance.
+
+;;
+;; Test the lazy-seq factorial function
+;;
+;;(println (time (factorial2 0)))
+;; => "Elapsed time: 0.07 msecs"  1
+;;(println (time (factorial2 1)))
+;; => "Elapsed time: 0.049 msecs" 1
+;;(println (time (factorial2 2)))
+;; => "Elapsed time: 0.057 msecs" 2
+;;(println (time (factorial2 3)))
+;; => "Elapsed time: 0.067 msecs" 6
+;;(println (time (factorial2 4)))
+;; => "Elapsed time: 0.061 msecs" 24
+;;(println (time (factorial2 5)))
+;; => "Elapsed time: 0.062 msecs" 120
+;;(println (time (factorial2 6)))
+;; => "Elapsed time: 0.065 msecs" 720
+;;(println (time (factorial2 7)))
+;; => "Elapsed time: 0.065 msecs" 5040
+;;(println (time (factorial2 8)))
+;; => "Elapsed time: 0.071 msecs" 40320
+;;(println (time (factorial2 9)))
+;; => "Elapsed time: 0.072 msecs" 362880
+;;(println (time (factorial2 10)))
+;; => "Elapsed time: 0.071 msecs" 3628800
+;;(println (time (factorial2 11)))
+;; => "Elapsed time: 0.073 msecs" 39916800
+;;(println (time (factorial2 12)))
+;; => "Elapsed time: 0.072 msecs" 479001600
+;;
+;; Aww Yiss...
+;;
+;; This won't blow the stack because range returns a lazy seq,
+;; and reduce walks across the seq without holding onto the head.
+;; reduce makes use of chunked seqs if it can,
+;; so this can actually perform better than using recur.
+;;
+;; This shows the power of using interfaces to separate client code
+;; from specific data representations or implementations.
+;;
+;; The client code never had to change even though we have experimented
+;; with several implementations;
