@@ -16,4 +16,9 @@
 (defn var-exp?
   {:doc "Returns true if the given expression is a variable expression, false otherwise"}
   [exp]
-  (symbol? exp))
+    (symbol? exp))
+
+(defn var-exp->var
+  {:doc ""}
+  [exp]
+    (exp))
