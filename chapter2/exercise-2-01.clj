@@ -183,13 +183,6 @@
     (reduce * (range 1 (inc n))))
 
 ;;
-;; lazy-seq factorial function
-;;
-(defn factorial2
-  [n]
-    (reduce * (range 1 (inc n))))
-
-;;
 ;; Test the lazy-seq factorial function
 ;;
 ;; (println (time (factorial-lazy-seq 0)))
