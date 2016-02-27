@@ -33,7 +33,7 @@
   [exp]
     (second exp))
 
-(defn app-exp->body
+(defn lambda-exp->body
   {:doc ""}
   [exp]
   (first (rest (rest exp))))
