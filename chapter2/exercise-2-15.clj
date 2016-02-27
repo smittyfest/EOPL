@@ -27,3 +27,8 @@
   {:doc ""}
   [exp]
     (first exp))
+
+(defn app-exp->rand
+  {:doc ""}
+  [exp]
+    (second exp))
