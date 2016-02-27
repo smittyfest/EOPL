@@ -145,6 +145,21 @@
 ;; The performance does not have as much variation as the base changes. Even large
 ;; changes in base result in small differences in overall performance.
 
+;; This implementation is pretty terrible.
+;; We can easily swap in better data representations and implementations
+;; while keeping client code independent of these internal details.
+
+;; Tail-Recursion
+;;
+;; Improved factorial function that utilizes tail-recursion to recycle the stack frame
+;;
+(defn factorial-tail-recursive
+  [n]
+    (loop [x n accu 1]
+      (if (<= x 1) accu
+        (recur (dec x) (* accu x)))))
+
+;; Test the tail-recursive factorial function
 ;;
 ;; (println (time (factorial-tail-recursive 0)))
 ;; => "Elapsed time: 0.026 msecs" 1
