@@ -12,3 +12,8 @@
   {:doc "Identity function"}
   [var]
     (var))
+
+(defn var-exp?
+  {:doc "Returns true if the given expression is a variable expression, false otherwise"}
+  [exp]
+  (symbol? exp))
