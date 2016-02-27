@@ -146,6 +146,47 @@
 ;; changes in base result in small differences in overall performance.
 
 ;;
+;; (println (time (factorial-tail-recursive 0)))
+;; => "Elapsed time: 0.026 msecs" 1
+;; (println (time (factorial-tail-recursive 1)))
+;; => "Elapsed time: 0.024 msecs" 1
+;; (println (time (factorial-tail-recursive 2)))
+;; => "Elapsed time: 0.03 msecs" 2
+;; (println (time (factorial-tail-recursive 3)))
+;; => "Elapsed time: 0.037 msecs" 6
+;; (println (time (factorial-tail-recursive 4)))
+;; => "Elapsed time: 0.042 msecs" 24
+;; (println (time (factorial-tail-recursive 5)))
+;; => "Elapsed time: 0.04 msecs" 120
+;; (println (time (factorial-tail-recursive 6)))
+;; => "Elapsed time: 0.048 msecs" 720
+;; (println (time (factorial-tail-recursive 7)))
+;; => "Elapsed time: 0.048 msecs" 5040
+;; (println (time (factorial-tail-recursive 8)))
+;; => "Elapsed time: 0.052 msecs" 40320
+;; (println (time (factorial-tail-recursive 9)))
+;; => "Elapsed time: 0.056 msecs" 362880
+;; (println (time (factorial-tail-recursive 10)))
+;; => "Elapsed time: 0.056 msecs" 3628800
+;; (println (time (factorial-tail-recursive 11)))
+;; => "Elapsed time: 0.06 msecs" 39916800
+;; (println (time (factorial-tail-recursive 12)))
+;; => "Elapsed time: 0.061 msecs" 479001600
+
+;; Let's try a really big number
+;; (println (time (factorial-tail-recursive 20)))
+;; => "Elapsed time: 0.088 msecs" 2432902008176640000
+
+
+;; Lazy Infinite Sequences
+;;
+;; Even better(?) factorial function that utilizes chunked lazy-sequences
+;;
+(defn factorial-lazy-seq
+  [n]
+    (reduce * (range 1 (inc n))))
+
+;;
 ;; lazy-seq factorial function
 ;;
 (defn factorial2
