@@ -22,3 +22,8 @@
   {:doc ""}
   [exp]
     (exp))
+
+(defn app-exp->rator
+  {:doc ""}
+  [exp]
+    (first exp))
