@@ -146,6 +146,13 @@
 ;; changes in base result in small differences in overall performance.
 
 ;;
+;; lazy-seq factorial function
+;;
+(defn factorial2
+  [n]
+    (reduce * (range 1 (inc n))))
+
+;;
 ;; Test the lazy-seq factorial function
 ;;
 ;;(println (time (factorial2 0)))
