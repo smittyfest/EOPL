@@ -14,6 +14,8 @@ Recursive Functions :-
 Chapter 2 - Summary: Data Abstraction
 =====================================
 
+Specifying Data via Interfaces :-
+
 Representation Strategies for Data Types :-
 
 The Environment Interface :-
