@@ -1,6 +1,8 @@
-
-;; ------------------------------------------------------------------------------
-;; Exercise 1.11[*]
+;; ==============================================================================
+;;
+;; @@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 1.11[*] @
+;; @@@@@@@@@@@@@@@@@@@@
 ;;
 ;; S-list ::= ()
 ;;        ::= (S-exp . S-list)
@@ -26,7 +28,7 @@
     (if (= exp old) new exp)
     (subst old new exp))) ;; guaranteed to halt because the grammar declares exp ::= symbol | s-list
 ;;
-;; run some unit-tests
+;; unit-tests
 ;;
 (is (= (subst 'b 'a ()) ()))
 (is (= (subst 'b 'a '(b b a a)) '(a a a a)))
