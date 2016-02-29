@@ -1,5 +1,8 @@
-;; ------------------------------------------------------------------------------
-;; Exercise 1.9[**]
+;; ==============================================================================
+;;
+;; @@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 1.9[**] @
+;; @@@@@@@@@@@@@@@@@@@@
 ;;
 (ns eopl.ch01 (:use clojure.test))
 (defn remove-all
@@ -10,7 +13,7 @@
     (if (= s (first xs)) (remove-all (rest xs) s)
   (cons (first xs) (remove-all (rest xs) s)))))
 ;;
-;; run some unit-tests
+;; unit-tests
 ;;
 (is (= (remove-all () 'a) ()))
 (is (= (remove-all '(a b) 'a) '(b)))
