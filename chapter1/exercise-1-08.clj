@@ -1,5 +1,8 @@
-;; ------------------------------------------------------------------------------
-;; Exercise 1.8[*]
+;; ==============================================================================
+;;
+;; @@@@@@@@@@@@@@@@@@@
+;; @ Exercise 1.8[*] @
+;; @@@@@@@@@@@@@@@@@@@
 ;;
 (ns eopl.ch01 (:use clojure.test))
 (defn remove-first
@@ -20,7 +23,7 @@
       (rest xs)
         (remove-up-to (rest xs) s))))
 ;;
-;; run some unit-tests
+;; unit-tests
 ;;
 (is (= (remove-first '(a b c) 'a) '(b c)))
 (is (= (remove-first '(a b c) 'e) '(a b c)))
