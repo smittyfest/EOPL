@@ -1,5 +1,8 @@
-;; ------------------------------------------------------------------------------
-;; Exercise 1.7[**]
+;; ==============================================================================
+;;
+;; @@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 1.7[**] @
+;; @@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Produce a more informative error message if
 ;; invalid input is given to the nth-elem function.
@@ -17,7 +20,7 @@
     (recur (dec cnt) (rest tmp)))))
 
 ;;
-;; run some unit-tests
+;; unit-tests
 ;;
 (is (= (nth-elem '(a b c d e) 4) 'e))
 (is (= (nth-elem '(a b c d e) 3) 'd))
