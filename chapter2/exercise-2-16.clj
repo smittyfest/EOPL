@@ -48,3 +48,8 @@
   {:doc ""}
   [exp]
     (second exp))
+
+(defn lambda-exp->body
+  {:doc ""}
+  [exp]
+  (first (rest (rest exp))))
