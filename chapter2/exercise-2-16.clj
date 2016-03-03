@@ -58,3 +58,16 @@
   {:doc ""}
   [exp]
     (first (second exp)))
+
+(defn occurs-free?
+  [search-var exp]
+    (cond
+      ((var-exp? exp) (== search-var (var-exp->var exp)))
+      ((lambda-exp? exp)
+        (and
+          (not (== search-var (lambda-exp->bound-var exp)))
+          (occurs-free? search-var (lambda-exp->body exp))))
+      :else
+        (or
+          (occurs-free? search-var (app-exp->rator exp))
+          (occurs-free? search-var (app-exp->rand exp)))))
