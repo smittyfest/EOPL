@@ -53,3 +53,8 @@
   {:doc ""}
   [exp]
   (first (rest (rest exp))))
+
+(defn lambda-exp->bound-var
+  {:doc ""}
+  [exp]
+    (first (second exp)))
