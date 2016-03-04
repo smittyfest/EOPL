@@ -8,6 +8,7 @@
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
+;; here are some constructors for the representation:
 (def one (list 'one))
 
 (defn diff
