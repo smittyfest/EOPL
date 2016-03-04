@@ -16,6 +16,7 @@
   [x y]
   (list 'diff x y))
 
+;; Here are some observers:
 (def zero (diff one one))
 
 (defn minus
