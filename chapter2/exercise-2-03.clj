@@ -17,6 +17,23 @@
 
 (def zero (diff one one))
 
+(defn minus
+  {:doc "returns the difference between two diff-tree representations"}
+  [n]
+  (diff zero n))
+
+(defn plus
+  {:doc "adds two integers in diff-tree representation"}
+  [x y]
+  (diff x (minus y)))
+
+(defn negate
+  {:doc ""}
+  [n]
+  (if (= (one n))
+    (diff zero one)
+    (diff (rest (rest n)) (rest n))))
+
 (defn successor
   {:doc "returns the successor of an integer in diff-tree representation"}
   [n]
@@ -27,29 +44,6 @@
   [n]
   (diff n (one)))
 
-(defn plus
-  {:doc "adds two integers in diff-tree representation"}
-  [x y]
-  (diff x (diff (zero) y)))
-
-(defn minus
-  {:doc "returns the difference between two diff-tree representations"}
-  [n]
-  (diff zero n))
-
-(defn negate
-  {:doc ""}
-  [n]
-  (if (= (one n))
-    (diff zero one)
-    (diff (rest (rest n)) (rest n))))
-
-;; diff-tree evaluation
-(defn eval
-  {:doc "Evaluates a Diff-Tree expression"}
-  [n]
-  (if (= (one n))
-  
 ;; Every number has infinitely-many representations in this system
 ;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
 ;;
