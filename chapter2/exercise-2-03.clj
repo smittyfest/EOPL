@@ -36,6 +36,14 @@
   (list 'diff x y))
 
 ;; Here are some observers:
+(defn one?
+  [diff-tree]
+  (== (first diff-tree) 'one))
+
+(defn diff?
+  [diff-tree]
+    (== (first diff-tree) 'diff))
+  
 (def zero (diff one one))
 
 (defn minus
