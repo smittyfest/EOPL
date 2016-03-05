@@ -6,6 +6,10 @@
 ;;
 ;; Diff-Tree ::= (one) | (diff Diff-Tree Diff-Tree)
 ;;
+;; 1. Every number has infinitely-many representations in this system
+;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
+;;
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 ;; here are some constructors for the representation:
