@@ -121,3 +121,7 @@
   {:doc "returns the predecessor of an integer in diff-tree representation"}
   [n]
   (diff n (one)))
+
+;;
+;; unit-tests
+;;
