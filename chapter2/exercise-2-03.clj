@@ -7,8 +7,17 @@
 ;; Diff-Tree ::= (one) | (diff Diff-Tree Diff-Tree)
 ;;
 ;; 1. Every number has infinitely-many representations in this system
-;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
+;;    because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
 ;;
+;; 2. Turn this representation of the integers into an implementation by
+;;    writing zero, is-zero?, successor and predecessor, as specified on
+;;    page 32, except that now the negative integers are also represented. Your
+;;    procedures should take as input any of the multiple legal representations
+;;    of an integer in this scheme. For example, if your successor procedure is
+;;    given any of the infinitely many legal representations of 1, it should
+;;    produce one of the legal representations of 2. It is permissible for
+;;    different legal representations of 1 to yield different representations
+;;    of 2.
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
