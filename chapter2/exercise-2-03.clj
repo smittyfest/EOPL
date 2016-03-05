@@ -87,6 +87,11 @@
   (diff n one))
 
 ;; 3. diff-tree-plus
+(defn diff-tree-plus
+  [diff-tree-1 diff-tree-2]
+    (diff diff-tree-1
+      (diff (subtrahend diff-tree-2)
+        (minuend diff-tree-2))))
 
 ;; more functions
 (defn minus
