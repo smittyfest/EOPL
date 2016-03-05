@@ -19,6 +19,12 @@
 ;;    different legal representations of 1 to yield different representations
 ;;    of 2.
 ;;
+;; 3. Write a proedure diff-tree-plus that does addition in this
+;;    representation. Your procedure should be optimized for the diff-tree
+;;    representation, and should do its work in a constant amount of time
+;;    (independent of the size of its inputs). In particular, it should not be
+;;    recursive.
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 ;; here are some constructors for the representation:
