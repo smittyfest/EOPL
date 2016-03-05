@@ -44,6 +44,14 @@
   [diff-tree]
     (== (first diff-tree) 'diff))
   
+(defn diff-first
+  [diff-tree]
+    (first (rest diff-tree)))
+
+(defn diff-second
+  [diff-tree]
+    (first (rest (rest diff-tree))))
+
 (def zero (diff one one))
 
 (defn minus
