@@ -52,6 +52,18 @@
   [diff-tree]
     (first (rest (rest diff-tree))))
 
+; Here are a few higher-level observers: minuend and subtrahend (credit: skanev)
+(defn minuend
+  [diff-tree]
+    (if (one? diff-tree) (one)
+      (diff-first diff-tree)))
+
+(defn subtrahend
+  [diff-tree]
+    (if (one? diff-tree)
+      (diff (one) (one))
+      (diff-second diff-tree)))
+
 (def zero (diff one one))
 
 (defn minus
