@@ -70,6 +70,14 @@
 ; interesting way to check (without conversion). #TODO: Find the way to do that
 (def zero (diff one one))
 
+(defn is-zero?
+  [n]
+  (defn to-int
+    [n]
+    (if (one? n) 1
+      (- (to-int (minuend n)) (to-int (subtrahend n))))
+    (zero? (to-int n))))
+
 (defn minus
   {:doc "returns the difference between two diff-tree representations"}
   [n]
@@ -87,6 +95,7 @@
     (diff zero one)
     (diff (rest (rest n)) (rest n))))
 
+;; successor and predecessor without using minuend and subtrahend
 (defn successor
   {:doc "returns the successor of an integer in diff-tree representation"}
   [n]
@@ -96,7 +105,3 @@
   {:doc "returns the predecessor of an integer in diff-tree representation"}
   [n]
   (diff n (one)))
-
-;; Every number has infinitely-many representations in this system
-;; because n = (n + 1) - 1, (n + 2) - 2, ..., (n + k) - k.
-;;
