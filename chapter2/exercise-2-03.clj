@@ -125,3 +125,6 @@
 ;;
 ;; unit-tests
 ;;
+(is (= one '(one)))
+(is (= (diff one one) '(diff (one) (one))))
+(is (= (diff (diff one one) (diff one one)) '(diff (diff (one) (one)) (diff (one) (one)))))
