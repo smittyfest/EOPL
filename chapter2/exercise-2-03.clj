@@ -78,6 +78,17 @@
       (- (to-int (minuend n)) (to-int (subtrahend n))))
     (zero? (to-int n))))
 
+(defn successor
+  [n]
+  (diff (minuend n) (diff (subtrahend n) one)))
+
+(defn predecessor
+  [n]
+  (diff n one))
+
+;; 3. diff-tree-plus
+
+;; more functions
 (defn minus
   {:doc "returns the difference between two diff-tree representations"}
   [n]
