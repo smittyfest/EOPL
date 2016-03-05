@@ -19,7 +19,7 @@
 ;;    different legal representations of 1 to yield different representations
 ;;    of 2.
 ;;
-;; 3. Write a proedure diff-tree-plus that does addition in this
+;; 3. Write a procedure diff-tree-plus that does addition in this
 ;;    representation. Your procedure should be optimized for the diff-tree
 ;;    representation, and should do its work in a constant amount of time
 ;;    (independent of the size of its inputs). In particular, it should not be
@@ -55,15 +55,19 @@
 ; Here are a few higher-level observers: minuend and subtrahend (credit: skanev)
 (defn minuend
   [diff-tree]
-    (if (one? diff-tree) (one)
+    (if (one? diff-tree) one
       (diff-first diff-tree)))
 
 (defn subtrahend
   [diff-tree]
     (if (one? diff-tree)
-      (diff (one) (one))
+      (diff one one)
       (diff-second diff-tree)))
 
+; Here are the four operations we have to implement. Note that is-zero?
+; explicitly converts the diff-tree to an integer and compares it with 0.
+; Since we know how successor and predecessor work, there is probably a more
+; interesting way to check (without conversion). #TODO: Find the way to do that
 (def zero (diff one one))
 
 (defn minus
