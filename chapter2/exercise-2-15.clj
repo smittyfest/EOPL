@@ -4,7 +4,26 @@
 ;; @ Exercise 2.15[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
-;; Implement the Lambda Calculus expression interface
+;;
+;; Implement the Lambda Calculus expression interface for the representation
+;; specified by the grammar:
+;;
+;; constructors:
+;; var-exp               :  var -> lc-exp
+;; lambda-exp            :  var x lc-exp -> lc-exp
+;; app-exp               :  lc-exp x lc-exp -> lc-exp
+;;
+;; predicates:
+;; var-exp?              : lc-exp -> bool
+;; lambda-exp?           : lc-exp -> bool
+;; app-exp?              : lc-exp -> bool
+;;
+;; extractors:
+;; var-exp->var          : lc-exp -> var
+;; lambda-exp->bound-var : lc-exp -> var
+;; lambda-exp->body      : lc-exp -> lc-exp
+;; app-exp->rator        : lc-exp -> lc-exp
+;; app-exp->rand         : lc-exp -> lc-exp
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
