@@ -71,3 +71,6 @@
         (or
           (occurs-free? search-var (app-exp->rator exp))
           (occurs-free? search-var (app-exp->rand exp)))))
+;;
+;; unit-tests
+;;
