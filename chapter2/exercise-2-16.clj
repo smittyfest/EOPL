@@ -4,6 +4,9 @@
 ;; @ Exercise 2.16[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Modify the implementation from exercise 2.15 to use a representation
+;; in which there are no parentheses around the bound variable in a lambda expression.
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defn var-exp
