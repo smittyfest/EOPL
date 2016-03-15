@@ -8,3 +8,8 @@
 ;; "define-datatype" ("deftype" in Clojure). Then include "has-binding?" of exercise 2.9.
 ;;
 (ns eopl.ch02 (:use clojure.test))
+
+(defprotocol IEnvironment
+  (empty-env [this])
+  (extend-env [this var val])
+  (apply-env [this var env]))
