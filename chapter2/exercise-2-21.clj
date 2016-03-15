@@ -16,3 +16,6 @@
 
 (deftype Environment []
   IEnvironment
+  (empty-env [this] ())
+  (extend-env [this var val] (prn "woof!"))
+  (apply-env [this val env] (prn "meow!")))
