@@ -13,3 +13,6 @@
   (empty-env [this])
   (extend-env [this var val])
   (apply-env [this var env]))
+
+(deftype Environment []
+  IEnvironment
