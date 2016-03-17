@@ -4,6 +4,9 @@
 ;; @ Exercise 1.2[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; What sets are defined by the following pairs of rules? Explain why.
+;;
+;;
 ;; ------------------------------------------------------------------------------
 ;; Exercise 1.2.1
 ;;
