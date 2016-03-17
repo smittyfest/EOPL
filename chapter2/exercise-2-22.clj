@@ -23,3 +23,6 @@
   (push [this var s] (prn "woof!"))
   (pop [this s] (prn "meow!"))
   top [this s] (prn "ribbet!"))
+;;
+;; unit-tests
+;;
