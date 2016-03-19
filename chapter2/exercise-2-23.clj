@@ -10,3 +10,9 @@
 ;; can be used in "define-datatype" ("deftype" in Clojure), even ones you define.
 ;;
 (ns eopl.ch02 (:use clojure.test))
+
+(defn identifier?
+  [x]
+  (and
+    (symbol? x)
+    (not (= 'lambda x))))
