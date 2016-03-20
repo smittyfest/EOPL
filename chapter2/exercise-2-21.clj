@@ -44,22 +44,15 @@
           :values (array-map
                    ~@(mapcat #(list (keyword %1) %1) variant-field-names))}))))
 
-;; (define-datatype type-name type-predicate-name
-;;   { (variant-name { (field-name predicate ) }* ) }+)
-
 (defmacro define-datatype [type-name type-predicate-name & variants]
   `(do
      (data-type-predicate ~type-name ~type-predicate-name)
      ~@(map (fn [v] `(data-type-variant ~v ~type-name)) variants)))
 
-;; (cases type-name expression
-;;   {(variant-name ({field-name}*) consequent)}*
-;;   (else default))
-
 (defmacro cases [type-name expression & clauses]
   (let [variant (gensym)]
     `(let [~variant ~expression]
-       (if (not (= (:type ~variant) '~type-name))
+       (if (not= (:type ~variant) '~type-name)
          (throw (Exception. (str "invalid type expected " '~type-name " found '" (:type ~variant) "'"))))
        (cond ~@(mapcat (fn [clause]
                          (let [variant-name (first clause)]
