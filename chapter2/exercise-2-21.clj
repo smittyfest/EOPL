@@ -5,7 +5,7 @@
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Implement the data type of environments, as in section 2.2.2, using
-;; "define-datatype" ("deftype" in Clojure). Then include "has-binding?" of exercise 2.9.
+;; "define-datatype". Then include "has-binding?" of exercise 2.9.
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
