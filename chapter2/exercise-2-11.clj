@@ -4,6 +4,22 @@
 ;; @ Exercise 2.11[**] @
 ;; @@@@@@@@@@@@@@@@@@@@@
 ;;
+;; A naive implementation of extend-env* from exercise 2.10 requires time proportional
+;; to k to run. It is possible to represent environments so that extend-env* requires only
+;; constant time: represent the empty environment by the empty list, and represent
+;; a non-empty environment by the data structure
+;;  
+;;                +--+--+
+;;                |  |  | -> saved-environment
+;;                +--+--+
+;;                 |
+;;                 v
+;;                +--+--+
+;;  saved vars <- |  |  | -> saved vals
+;;                +--+--+
+;;
+;; Such and environment might look like
+;; (more...)
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty-env
