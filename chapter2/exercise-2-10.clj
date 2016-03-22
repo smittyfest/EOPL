@@ -4,6 +4,13 @@
 ;; @ Exercise 2.10[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Add to the environment interface a constructor extend-env*, and implement it
+;; using the association-list representation. This constructor takes a list of variables,
+;; a list of values of the same length, and an environment, and is specified by:
+;;
+;; (extend-env* (var₁ ... var_k) (val₁ ... val_k) = |f| = |g|,
+;; where g(var) = { val_i if var = var_i for some i such that 1 <= i <= k, or f(var) otherwise }
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty-env
