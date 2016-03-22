@@ -22,7 +22,9 @@
   (extend-env [this var val] (prn "woof!"))
   (apply-env [this val env] (prn "meow!")))
 
-;; In order to implement 'define-datatype', we need to utilize Clojure macros
+;; @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;; @ In order to implement 'define-datatype', we need to utilize Clojure Macros @
+;; @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 (defmacro data-type-predicate [type-name type-predicate-name]
   `(defn ~type-predicate-name [~'variant]
      (= (:type ~'variant) '~type-name)))
@@ -66,9 +68,11 @@
                                   (vals (:values ~variant))))))))
                        clauses)))))
 
-(defn data-value [data field-name]
-  (get (get data :values) field-name))
-
+(defn data-value
+  [data field-name]
+  (get 
+    (get data :values)
+      field-name))
 ;;
 ;; unit-tests
 ;;
