@@ -4,6 +4,9 @@
 ;; @ Exercise 2.3[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Define a representation of all the integers (negative and non-negative)
+;; as Diff-Trees, where a Diff-Tree is a list defined by the grammar:
+;;
 ;; Diff-Tree ::= (one) | (diff Diff-Tree Diff-Tree)
 ;;
 ;; 1. Every number has infinitely-many representations in this system
