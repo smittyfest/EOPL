@@ -78,9 +78,9 @@
 (def gt? (comp pos? compare))
 (def lt? (comp neg? compare))
 
-;; 
 ;; Binary Search Tree implementation
 ;;
+;; Uses Clojure's 'definterface' and 'deftype' constructs
 (definterface INode
   (leftChild [])
   (rightChild [])
