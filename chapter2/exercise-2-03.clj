@@ -30,7 +30,7 @@
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
-;; here are some constructors for the representation:
+;; constructors for the representation:
 (def one (list 'one))
 
 (defn diff
@@ -38,7 +38,7 @@
   [x y]
   (list 'diff x y))
 
-;; Here are some observers:
+;; observers:
 (defn one?
   [diff-tree]
   (== (first diff-tree) 'one))
@@ -55,7 +55,7 @@
   [diff-tree]
     (first (rest (rest diff-tree))))
 
-; Here are a few higher-level observers: minuend and subtrahend (credit: skanev)
+;; higher-level observers: minuend and subtrahend (credit: skanev)
 (defn minuend
   [diff-tree]
     (if (one? diff-tree) one
