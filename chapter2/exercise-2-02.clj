@@ -4,6 +4,9 @@
 ;; @ Exercise 2.2[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Analyze each of the proposed representations critically. To what
+;; extent do they succeed or fail in satisfying the specification of the data type?
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 ;; unary representation
