@@ -5,6 +5,7 @@
 ;; @@@@@@@@@@@@@@@@@@@
 ;;
 ;; association-list implementation of environments
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 ;; Vector Representation of Association-List
