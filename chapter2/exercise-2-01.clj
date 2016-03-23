@@ -4,7 +4,12 @@
 ;; @ Exercise 2.1[*] @
 ;; @@@@@@@@@@@@@@@@@@@
 ;;
-;; Start with a terrible implementation and improve it.
+;; Implement the four required operations for bigints. Then use your
+;; implementation to compute the factorial of 10. How does the execution time vary
+;; as this argument changes? How does the execution time vary as the base changes?
+;; Explain why.
+;;
+;; :- Start with a terrible implementation and improve it. -:
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
