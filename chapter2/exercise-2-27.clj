@@ -6,6 +6,7 @@
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
+;; one
                  Lambda-Exp
                 /          \
                /            \
@@ -22,4 +23,11 @@
               var      var
                |        |
                a        b
-               
+
+;; two
+                  Lambda-Exp-------------------------
+                 /                                  |
+            Lambda-Exp                           Var-Exp
+      Bound-Var      Lambda-Exp
+                  Bound-Var  Lambda-Exp
+                            Bound-Var  App-Exp
