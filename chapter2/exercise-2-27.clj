@@ -25,9 +25,10 @@
                a        b
 
 ;; two
-                  Lambda-Exp-------------------------
-                 /                                  |
+                  Lambda-Exp -----------------------
+                 /                                  \
             Lambda-Exp                           Var-Exp
+           /          \
       Bound-Var      Lambda-Exp
                   Bound-Var  Lambda-Exp
                             Bound-Var  App-Exp
