@@ -15,4 +15,4 @@
   [x]
   (and
     (symbol? x)
-    (not (= 'lambda x))))
+    (not= 'lambda x)))
