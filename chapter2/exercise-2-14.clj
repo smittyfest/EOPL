@@ -1,8 +1,8 @@
 ;; ==============================================================================
 ;;
-;; @@@@@@@@@@@@@@@@@@@@
-;; @ Exercise 2.14[*] @
-;; @@@@@@@@@@@@@@@@@@@@
+;; @@@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 2.14[**] @
+;; @@@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Extend the representation of the preceding exercise to include a
 ;; third procedure that implements has-binding? (see exercise 2.9).
