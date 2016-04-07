@@ -1,8 +1,13 @@
 ;; ==============================================================================
 ;;
-;; @@@@@@@@@@@@@@@@@@@@
-;; @ Exercise 2.13[*] @
-;; @@@@@@@@@@@@@@@@@@@@
+;; @@@@@@@@@@@@@@@@@@@@@
+;; @ Exercise 2.13[**] @
+;; @@@@@@@@@@@@@@@@@@@@@
+;;
+;; Extend the procedural representation to implement empty-env?
+;; by representing the environment by a list of two procedures: one that returns the
+;; value associated with a variable, as before, and one that returns whether or not the
+;; environment is empty.
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
