@@ -7,6 +7,8 @@
 (ns eopl.ch02 (:use clojure.test))
 
 ;; one
+((lambda (a) (a b)) c)
+
                  Lambda-Exp
                 /          \
                /            \
@@ -25,6 +27,11 @@
                a        b
 
 ;; two
+(lambda (x)
+  (lambda (y)
+    ((lambda (x)
+       (x y))
+     x)))
                   Lambda-Exp -----------------------
                  /                                  \
             Lambda-Exp                           Var-Exp
