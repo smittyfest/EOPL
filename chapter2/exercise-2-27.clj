@@ -32,6 +32,7 @@
     ((lambda (x)
        (x y))
      x)))
+
                   Lambda-Exp -----------------------
                  /                                  \
             Lambda-Exp                           Var-Exp
