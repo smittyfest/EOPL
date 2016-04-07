@@ -6,14 +6,32 @@
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
+(def make-env cons)
+(def apply-env-func first)
+(def empty-env?-func rest)
+
+(defn report-no-binding-found
+  [search-var]
+  (println 'apply-env "No binding found for ~s" search-var))
+
 (defn empty-env
   []
   [(fn [] true)
    (fn [search-var] (throw (IllegalStateException.)))])
 
+(defn empty-env2
+  []
+  (make-env (fn [search-var]
+              (report-no-binding-found search-var))
+            (fn [] true)))
+
 (defn apply-env
   [search-var env]
   (search-var (first env)))
+
+(defn apply-env2
+  [search-var env]
+  ((apply-env-func env) search-var))
 
 (defn extend-env
   [var val env]
@@ -22,9 +40,20 @@
      (if (= var search-var) val
        (apply-env search-var env)))])
 
+(defn extend-env2
+  [saved-var saved-val saved-env]
+  (make-env (fn [search-var]
+              (if (= search-var saved-var) saved-val
+                (apply-env2 search-var saved-env))
+            (fn [] false))))
+
 (defn empty-env?
   [env]
-  ((second env)))
+  ((rest env)))
+
+(defn empty-env2?
+  [env]
+  (empty-env?-func env))
 ;;
 ;; unit-tests
 ;;
