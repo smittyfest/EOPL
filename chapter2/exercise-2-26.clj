@@ -12,7 +12,10 @@
 ;;                  ::= (Blue-Node {Red-Blue-SubTree}*)
 ;;                  ::= (Leaf-Node Int)
 ;;
-;;
+;; Write an equivalent definition using define-datatype, and use the resulting interface
+;; to write a procedure that takes a tree and builds a tree of the same shape, except
+;; that each leaf node is replaced by a leaf node that contains the number of red-nodes
+;; on the path between it and the root.
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
