@@ -4,6 +4,8 @@
 ;; @ Exercise 2.26[**] @
 ;; @@@@@@@@@@@@@@@@@@@@@
 ;;
+;; Here is another version of exercise 1.33.
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defmacro data-type-predicate [type-name type-predicate-name]
