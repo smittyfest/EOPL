@@ -5,6 +5,14 @@
 ;; @@@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Here is another version of exercise 1.33.
+;; Consider a set of trees given by the following grammar:
+;;
+;; Red-Blue-Tree    ::= Red-Blue-SubTree
+;; Red-Blue-SubTree ::= (Red-Node Red-Blue-SubTree Red-Blue-SubTree)
+;;                  ::= (Blue-Node {Red-Blue-SubTree}*)
+;;                  ::= (Leaf-Node Int)
+;;
+;;
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
