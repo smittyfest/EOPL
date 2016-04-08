@@ -21,6 +21,10 @@
 ;; current-element, move-to-left, move-to-right, insert-to-left, insert-to-right, at-left-end?,
 ;; and at-right-end?. For example:
 ;;
+;; > (number->sequence 7)
+;; (7 () ())
+;; > (current-element '(6 (5 4 3 2 1) (7 8 9)))
+;; 6
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
