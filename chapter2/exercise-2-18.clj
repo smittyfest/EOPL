@@ -25,6 +25,8 @@
 ;; (7 () ())
 ;; > (current-element '(6 (5 4 3 2 1) (7 8 9)))
 ;; 6
+;; > (move-to-left '(6 (5 4 3 2 1) (7 8 9)))
+;; (5 (4 3 2 1) (6 7 8 9))
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
