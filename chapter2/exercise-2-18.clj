@@ -4,6 +4,10 @@
 ;; @ Exercise 2.18[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; We usually represent a sequence of values as a list. In this representation,
+;; it is easy to move from one element in a sequence to the next, but it is hard
+;; to move from one element to the preceding one without the help of context arguments.
+;;
 ;; Implement non-empty, bidirectional sequences of integers, as suggested by the grammar:
 ;;
 ;; NodeInSequence ::= (Int List[Int] List[Int])
