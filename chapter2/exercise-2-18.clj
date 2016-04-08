@@ -7,10 +7,13 @@
 ;; We usually represent a sequence of values as a list. In this representation,
 ;; it is easy to move from one element in a sequence to the next, but it is hard
 ;; to move from one element to the preceding one without the help of context arguments.
-;;
 ;; Implement non-empty, bidirectional sequences of integers, as suggested by the grammar:
 ;;
 ;; NodeInSequence ::= (Int List[Int] List[Int])
+;;
+;; The first list of numbers is the elements of the sequence preceding the current one,
+;; in reverse order, and the second list is the elements of the sequence after the current
+;; one.
 ;;
 (ns eopl.ch02 (:use clojure.test))
 
