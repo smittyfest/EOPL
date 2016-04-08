@@ -15,7 +15,13 @@
 ;; in reverse order, and the second list is the elements of the sequence after the current one.
 ;; For example, (6 (5 4 3 2 1) (7 8 9)) represents the list (1 2 3 4 5 6 7 8 9), with the focus
 ;; on the element 6.
-;; In this representation, 
+;;
+;; In this representation, implement the procedure number->sequence, which takes
+;; a number and produces a sequence consisting of exactly that number. Also implement
+;; current-element, move-to-left, move-to-right, insert-to-left, insert-to-right, at-left-end?,
+;; and at-right-end?. For example:
+;;
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defn number->sequence
