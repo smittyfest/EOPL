@@ -12,9 +12,10 @@
 ;; NodeInSequence ::= (Int List[Int] List[Int])
 ;;
 ;; The first list of numbers is the elements of the sequence preceding the current one,
-;; in reverse order, and the second list is the elements of the sequence after the current
-;; one.
-;;
+;; in reverse order, and the second list is the elements of the sequence after the current one.
+;; For example, (6 (5 4 3 2 1) (7 8 9)) represents the list (1 2 3 4 5 6 7 8 9), with the focus
+;; on the element 6.
+;; In this representation, 
 (ns eopl.ch02 (:use clojure.test))
 
 (defn number->sequence
