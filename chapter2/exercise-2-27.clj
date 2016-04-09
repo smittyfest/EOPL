@@ -34,12 +34,26 @@
        (x y))
      x)))
 
-                  Lambda-Exp -----------------------
-                 /                                  \
-               Body                              Bound-Var
-                |                                    
-            Lambda-Exp                               |
-           /          \                              x
-      Bound-Var      Lambda-Exp
-                  Bound-Var  Lambda-Exp
-                            Bound-Var  App-Exp
+       Lambda-Exp
+        /       \
+  Bound-Var    Body
+       |         |
+       x     Lambda-Exp
+              /      \
+        Bound-Var    Body
+             |        |
+             y     App-Exp
+                  /       \
+               rator     rand
+                 |         |
+           Lambda-Exp   Var-Exp
+            /      \       |
+      Bound-Var   Body    var  
+           |       |       |
+           x    App-Exp    x
+                /     \
+            Var-Exp Var-Exp
+               |       |
+              var     var
+               |       |
+               x       y
