@@ -77,7 +77,20 @@
 
 (defn mark-leaves-with-red-depth
   [b]
-  true)
+  (defn accu
+    [b red-depth]
+    (cases red-blue-subtree b
+      (red-node (left right)
+        (red-node (loop [left (+ red-depth 1)])
+                  (loop [right (+ red-depth 1)])))
+      (blue-node (subtrees)
+        (blue-node (map (fn [s] (loop [] s red-depth))
+                         subtrees)))
+      (leaf-node (num)
+        (leaf-node red-depth))))
+  (cases red-blue-tree b
+    (a-red-blue-tree (root)))
+  (accu b 0))
 ;;
 ;; unit-tests
 ;;
