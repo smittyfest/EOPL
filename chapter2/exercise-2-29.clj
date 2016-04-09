@@ -69,6 +69,7 @@
    [x]
    (and (symbol? x) (not= 'lambda x)))
 
+;; type definition for lambda calculus expressions
  (define-datatype lc-exp lc-exp?
  (var-exp
   (var identifier?))
@@ -99,3 +100,4 @@
           (map parse-expression (rest exp)))))
     :else (report-invalid-concrete-syntax exp)))
 
+;; unit-tests
