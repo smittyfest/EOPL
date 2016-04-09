@@ -4,6 +4,11 @@
 ;; @ Exercise 2.27[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Draw the abstract syntax tree for the lambda calculus expressions:
+;;
+;; one) ((lambda (a) (a b)) c)
+;; two) (lambda (x) (lambda (y) ((lambda (x) (x y)) x)))
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 ;; one
