@@ -9,22 +9,23 @@
 ;; one
 ((lambda (a) (a b)) c)
 
-                 Lambda-Exp
-                /          \
-               /            \
-        Lambda-Exp        Var-Exp
-       /          \          |
-  Bound-Var       Body      var
-      |            |         |
-      a         App-Exp      c
+                App-Exp
                 /     \
              rator    rand
-               |        |
-            Var-Exp  Var-Exp
-               |        |
-              var      var
-               |        |
-               a        b
+              |         |
+        Lambda-Exp   Var-Exp
+         /       \      |
+    Bound-Var   Body   var
+        |        |      |
+        a     App-Exp   c
+              /     \
+           rator    rand
+             |        |
+          Var-Exp  Var-Exp
+             |        |
+            var      var
+             |        |
+             a        b
 
 ;; two
 (lambda (x)
@@ -35,8 +36,10 @@
 
                   Lambda-Exp -----------------------
                  /                                  \
-            Lambda-Exp                           Var-Exp
-           /          \
+               Body                              Bound-Var
+                |                                    
+            Lambda-Exp                               |
+           /          \                              x
       Bound-Var      Lambda-Exp
                   Bound-Var  Lambda-Exp
                             Bound-Var  App-Exp
