@@ -64,3 +64,38 @@
                                     ~@consequent)
                                   (vals (:values ~variant))))))))
                        clauses)))))
+
+ (defn identifier?
+   [x]
+   (and (symbol? x) (not= 'lambda x)))
+
+ (define-datatype lc-exp lc-exp?
+ (var-exp
+  (var identifier?))
+ (lambda-exp
+  (bound-vars (list identifier?))
+  (body lc-exp?))
+ (app-exp
+  (rator lc-exp?)
+  (rands (list lc-exp?))))
+
+(defn pair?
+  [exp]
+  (and (first exp) (second exp)))
+
+(defn report-invalid-concrete-syntax
+  [exp]
+  (println 'parse-expression "Syntax error: ~s" exp))
+
+(defn parse-expression
+  [exp]
+  (cond
+    (symbol? exp) (var-exp exp)
+    (pair? exp)
+      (if (= 'lambda (first exp))
+        (lambda-exp (first (rest exp)
+          (parse-expression (first (rest (rest exp)))))
+        (app-exp (parse-expression (first exp))
+          (map parse-expression (rest exp)))))
+    :else (report-invalid-concrete-syntax exp)))
+
