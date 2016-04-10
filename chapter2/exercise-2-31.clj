@@ -84,3 +84,49 @@
                                     ~@consequent)
                                   (vals (:values ~variant))))))))
                        clauses)))))
+
+(def prefix-exp? list?)
+
+(defn const-exp
+  [x]
+  (list 'const-exp x))
+
+(defn diff-exp
+  [x y]
+  (list 'diff-exp x y))
+
+(defn prefix-exp?
+  [exp]
+  (or (prefix-exp? exp) number? exp))
+
+(defn exp
+  [x]
+  (if (number? x) (const-exp x)
+    x))
+  
+(defn parse-prefix
+  ([exp]
+     (if (prefix-exp? (first exp))
+       (first exp)
+       (parse-prefix (list (second exp) (first exp)) (rest (rest exp)))))
+  ([left right]
+     (let [[f s & x] left]
+       (if (and (prefix? f) (prefix? s))
+         (parse-prefix (concat (reverse (rest x))
+                               (list* (diff-exp
+                                       (exp s)
+                                       (exp f)) right)))
+         (recur (cons (first right) left) (rest right))))))
+
+(deftest parse-prefix-test
+  (is (= (parse-prefix '(- - 3 2 - 4 - 12 7))
+         '(diff-exp
+           (diff-exp
+            (const-exp 3)
+            (const-exp 2))
+           (diff-exp
+            (const-exp 4)
+            (diff-exp
+             (const-exp 12)
+             (const-exp 7)))))))
+(run-tests)
