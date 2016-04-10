@@ -118,6 +118,7 @@
                                        (exp f)) right)))
          (recur (cons (first right) left) (rest right))))))
 
+;; unit-tests
 (deftest parse-prefix-test
   (is (= (parse-prefix '(- - 3 2 - 4 - 12 7))
     '(diff-exp
