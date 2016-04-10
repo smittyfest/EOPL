@@ -17,5 +17,14 @@
 ;;
 ;; Write a parser to convert a prefix-list to the abstract syntax:
 ;;
+;; (define-datatype prefix-exp prefix-exp?
+;;   (const-exp
+;;     (num integer?))
+;;   (diff-exp
+;;     (operand1 prefix-exp?)
+;;     (operand2 prefix-exp?)))
+;;
+;; so that the example above produces the same abstract syntax tree as the sequence
+;; of constructors:
 ;;
 (ns eopl.ch02 (:use clojure.test))
