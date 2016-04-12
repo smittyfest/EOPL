@@ -74,7 +74,7 @@
   (cases lc-exp exp
          (var-exp (var) (= var search-var))
          (lambda-exp (bound-var body)
-                     (and (not (= search-var bound-var))
+                     (and (not= search-var bound-var)
                           (occurs-free? search-var body)))
          (app-exp (rator rand)
                   (or (occurs-free? search-var rator)
