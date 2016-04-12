@@ -5,7 +5,7 @@ Working through "Essentials of Programming Languages" by Daniel P. Friedman and 
 
 Chapter 1 - Summary: Inductive Sets of Data
 ===========================================
-Inductive Sets :-
+Inductive Sets :- 3 forms of induction: top-down, bottom-up, rules of inference
 
 Context-Free Grammars :-
 
