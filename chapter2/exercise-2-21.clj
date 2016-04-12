@@ -70,9 +70,7 @@
 
 (defn data-value
   [data field-name]
-  (get 
-    (get data :values)
-      field-name))
+    (get (get data :values) field-name))
     
 ;; @@@@@@@@@@@@@@@@
 ;; @ Environments @
