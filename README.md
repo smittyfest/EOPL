@@ -25,3 +25,6 @@ Procedural Representation :-
 Interfaces for Recursive Data Types :-
 
 Concrete Syntax vs Abstract Syntax and its Representation :-
+
+Chapter 3 - Summary: Expressions
+================================
