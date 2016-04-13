@@ -7,13 +7,16 @@
 ;; In figure 3.3, list all the places where we used the fact that ⌊⌈x⌉⌋ = n.
 ;;
 ;; Figure 3.3 - A simple calculation using the specification:
+;;
+(ns eopl.ch02 (:use clojure.test))
 
 Let ρ = [i=1,v=5,x=10].
 
 (value-of
   <<-(-(x,3), -(v,i))>>
     ρ)
-= (-
+
+= ⌈(-
 (value-of <<-(x,3)>> ρ)
 (value-of <<-(v,i)>> ρ))
 = (-
