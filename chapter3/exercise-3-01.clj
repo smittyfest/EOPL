@@ -8,7 +8,7 @@
 ;;
 ;; Figure 3.3 - A simple calculation using the specification:
 ;;
-(ns eopl.ch02 (:use clojure.test))
+(ns eopl.ch03 (:use clojure.test))
 
 Let ρ = [i=1,v=5,x=10].
 
@@ -17,8 +17,9 @@ Let ρ = [i=1,v=5,x=10].
     ρ)
 
 = ⌈(-
-(value-of <<-(x,3)>> ρ)
-(value-of <<-(v,i)>> ρ))
+    ⌊(value-of <<-(x,3)>> ρ)⌋
+    ⌊(value-of <<-(v,i)>> ρ)⌋)⌉
+
 = (-
 (-
 (value-of <<x>> ρ)
