@@ -23,4 +23,6 @@ empty
 push
 pop
 
-;; observers: top, empty?
+;; observers
+top ;; top or peek is usually an observer, but here acts like both a constructor and an observer
+empty?
