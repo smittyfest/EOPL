@@ -4,6 +4,7 @@
 ;; @ Exercise 2.17[*] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Invent at least
 (ns eopl.ch02 (:use clojure.test))
 
 ;; A. List with a tag as the first element:
