@@ -18,5 +18,9 @@
 (top s)       = (car s)
 (empty? s)    = {#t if s = (), #f otherwise}
 
-;; constructors: empty, push, pop
+;; constructors
+empty
+push
+pop
+
 ;; observers: top, empty?
