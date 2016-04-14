@@ -9,11 +9,14 @@
 ;; for these operations in the style of the example above. Which operations
 ;; are constructors and which are observers?
 ;;
-;; (empty)       = ()
-;; (push [f] s)  = (f . s)
-;; (pop s)       = (cdr s)
-;; (top s)       = (car s)
-;; (empty? s)    = {#t if s = (), #f otherwise}
-;;
+(ns eopl.ch02 (:use clojure.test))
+
+;; Specification
+(empty)       = ()
+(push [f] s)  = (f . s)
+(pop s)       = (cdr s)
+(top s)       = (car s)
+(empty? s)    = {#t if s = (), #f otherwise}
+
 ;; constructors: empty, push, pop
 ;; observers: top, empty?
