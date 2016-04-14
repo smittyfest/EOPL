@@ -5,7 +5,10 @@
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Consider the data type of Stacks of values, with an interface consisting
-;; of the procedures 
+;; of the procedures empty, push, pop, top, and empty?. Write a specification
+;; for these operations in the style of the example above. Which operations
+;; are constructors and which are observers?
+;;
 ;; (empty)       = ()
 ;; (push [f] s)  = (f . s)
 ;; (pop s)       = (cdr s)
