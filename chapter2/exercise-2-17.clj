@@ -5,7 +5,7 @@
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Invent at least two other representations of the data type of
-;; Lambda-Calculus
+;; Lambda-Calculus expressions and implement them.
 (ns eopl.ch02 (:use clojure.test))
 
 ;; A. List with a tag as the first element:
