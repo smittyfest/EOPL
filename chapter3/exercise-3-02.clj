@@ -4,4 +4,4 @@
 ;; @ Exercise 3.2[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
-;; Give an expressed value val ∈ ExpVal for which
+;; Give an expressed value val ∈ ExpVal for which ⌈⌊val
