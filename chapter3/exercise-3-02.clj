@@ -4,3 +4,4 @@
 ;; @ Exercise 3.2[**] @
 ;; @@@@@@@@@@@@@@@@@@@@
 ;;
+;; Give an expressed value val
