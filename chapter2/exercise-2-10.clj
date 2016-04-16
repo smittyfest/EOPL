@@ -37,7 +37,7 @@
   {:doc "Retrieve a value for a given variable in an environment"}
   [search-var env]
   (cond
-    (= env []) nil
+    (empty-env? env) nil
     (sequential? env) 
       (let [[var val] (peek env)]
         (if (= search-var var) val
