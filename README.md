@@ -20,7 +20,8 @@ Representation Strategies for Data Types :-
 
 The Environment Interface :-
 
-Procedural Representation :- The key to why this works is closures.
+Procedural Representation :- The key to why this works is closures. In the Environment interface example,
+empty-env and extend-env both return functions that
 
 Interfaces for Recursive Data Types :-
 
