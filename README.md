@@ -22,7 +22,8 @@ The Environment Interface :-
 
 Procedural Representation :- The key to why this works is closures. In the Environment interface example,
 empty-env and extend-env both return functions that behave as apply-env would with the given argument.
-Since each closure saves the state of its lexical scope from when it was invoked,
+Since each closure saves the state of its lexical scope from when it was invoked, we can model the environment
+as it is built up.
 
 Interfaces for Recursive Data Types :-
 
