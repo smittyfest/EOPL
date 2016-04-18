@@ -20,7 +20,7 @@ Representation Strategies for Data Types :-
 
 The Environment Interface :-
 
-Procedural Representation :-
+Procedural Representation :- The key to why this works is closures.
 
 Interfaces for Recursive Data Types :-
 
