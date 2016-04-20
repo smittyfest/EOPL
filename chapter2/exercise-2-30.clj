@@ -5,7 +5,9 @@
 ;; @@@@@@@@@@@@@@@@@@@@@
 ;;
 ;; The procedure parse-expression as defined above is fragile:
-;; it does not detect several possible syntactic errors,
+;; it does not detect several possible syntactic errors, such as
+;; (a b c), and terminates with inappropriate error messages for other
+;; expressions,
 (ns eopl.ch02 (:use clojure.test))
 
 (defmacro data-type-predicate [type-name type-predicate-name]
