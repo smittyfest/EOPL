@@ -4,6 +4,7 @@
 ;; @ Exercise 2.30[**] @
 ;; @@@@@@@@@@@@@@@@@@@@@
 ;;
+;; The procedure parse-expression as defined above
 (ns eopl.ch02 (:use clojure.test))
 
 (defmacro data-type-predicate [type-name type-predicate-name]
