@@ -8,7 +8,8 @@
 ;; it does not detect several possible syntactic errors, such as
 ;; (a b c), and terminates with inappropriate error messages for other
 ;; expressions, such as (lambda). Modify it so that it is robust, accepting
-;; any symbolic-expression
+;; any symbolic-expression and issuing an appropriate error message if the
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defmacro data-type-predicate [type-name type-predicate-name]
