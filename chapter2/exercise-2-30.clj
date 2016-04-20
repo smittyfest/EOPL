@@ -4,7 +4,8 @@
 ;; @ Exercise 2.30[**] @
 ;; @@@@@@@@@@@@@@@@@@@@@
 ;;
-;; The procedure parse-expression as defined above
+;; The procedure parse-expression as defined above is fragile:
+;; it does not detect several possible syntactic errors,
 (ns eopl.ch02 (:use clojure.test))
 
 (defmacro data-type-predicate [type-name type-predicate-name]
