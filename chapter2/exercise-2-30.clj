@@ -9,7 +9,8 @@
 ;; (a b c), and terminates with inappropriate error messages for other
 ;; expressions, such as (lambda). Modify it so that it is robust, accepting
 ;; any symbolic-expression and issuing an appropriate error message if the
-;; symbolic-expression does not represent 
+;; symbolic-expression does not represent a lambda-calculus expression.
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defmacro data-type-predicate [type-name type-predicate-name]
