@@ -29,7 +29,8 @@
 ;;     (a b c) <- |  |  | -> (1 2 3)   (x z) <- |  |  | -> (4 5)   (w y) <- |  |  | -> (88 99)
 ;;                +--+--+                       +--+--+                     +--+--+
 ;;
-;; The environment is represented as a list of pairs; for each node, the first element is a list of variables
+;; The environment is represented as a list of pairs; for each pair, the first element is a list of variables
+;; and the second element is the corresponding list of values.
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty-env
