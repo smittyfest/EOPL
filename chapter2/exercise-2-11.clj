@@ -29,6 +29,7 @@
 ;;     (a b c) <- |  |  | -> (1 2 3)   (x z) <- |  |  | -> (4 5)   (w y) <- |  |  | -> (88 99)
 ;;                +--+--+                       +--+--+                     +--+--+
 ;;
+;; The environment is represented as a list of pairs;
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty-env
