@@ -31,6 +31,9 @@
 ;;
 ;; The environment is represented as a list of pairs; for each pair, the first element is a list of variables
 ;; and the second element is the corresponding list of values.
+;;
+;; Implement the environment interface, including extend-env*, in this representation.
+;;
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty-env
