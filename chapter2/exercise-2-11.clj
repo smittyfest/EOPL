@@ -7,7 +7,7 @@
 ;; A naive implementation of extend-env* from exercise 2.10 requires time proportional
 ;; to k to run. It is possible to represent environments so that extend-env* requires only
 ;; constant time: represent the empty environment by the empty list, and represent
-;; a non-empty environment by the data structure
+;; a non-empty environment by the data structure:
 ;;  
 ;;                +--+--+
 ;;                |  |  | -> saved-environment
@@ -18,7 +18,7 @@
 ;;  saved vars <- |  |  | -> saved vals
 ;;                +--+--+
 ;;
-;; Such and environment might look like
+;; Such an environment might look like:
 ;;
 ;;                +--+--+                       +--+--+                     +--+--+
 ;;                |  |  | --------------------> |  |  | ------------------> |  |  | ----------> rest of saved environment
