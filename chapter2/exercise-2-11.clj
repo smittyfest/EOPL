@@ -19,7 +19,12 @@
 ;;                +--+--+
 ;;
 ;; Such and environment might look like
-;; (more...)
+;;
+;;                +--+--+              +--+--+             +--+--+
+;;                |  |  | -----------> |  |  | ----------> |  |  | ----------> rest of saved environment
+;;                +--+--+              +--+--+             +--+--+
+;;                 |
+;;                 v
 (ns eopl.ch02 (:use clojure.test))
 
 (defn empty-env
