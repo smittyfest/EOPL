@@ -25,7 +25,7 @@ empty-env and extend-env both return functions that behave as apply-env would wi
 Since each closure saves the state of its lexical scope from when it was invoked, we can model the environment
 as it is built up.
 
-Interfaces for Recursive Data Types :- One constructor for each kind of data in the recursive data type.
+Interfaces for Recursive Data Types :- One constructor for each kind of data in the recursive data type. One Predicate for each kind of data in the data type. One 
 
 Concrete Syntax vs Abstract Syntax and its Representation :-
 
