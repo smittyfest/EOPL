@@ -27,7 +27,7 @@ as it is built up.
 
 Interfaces for Recursive Data Types :- One constructor for each kind of data in the recursive data type. One Predicate for each kind of data in the data type. One extractor for each kind of data that's an argument to a constructor.
 
-Concrete Syntax vs Abstract Syntax and its Representation :-
+Concrete Syntax vs Abstract Syntax and its Representation :-l
 
 Chapter 3 - Summary: Expressions
 ================================
