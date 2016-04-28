@@ -4,7 +4,7 @@
 ;; @ Exercise 1.36[***] @
 ;; @@@@@@@@@@@@@@@@@@@@@@
 ;;
-;; Write a procedure
+;; Write a procedure g such that
 (ns eopl.ch01 (:use clojure.test))
 
 (declare g)
