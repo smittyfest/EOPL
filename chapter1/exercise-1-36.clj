@@ -4,7 +4,7 @@
 ;; @ Exercise 1.36[***] @
 ;; @@@@@@@@@@@@@@@@@@@@@@
 ;;
-;; Write a procedure g such that
+;; Write a procedure g such that number-elements from page 23
 (ns eopl.ch01 (:use clojure.test))
 
 (declare g)
