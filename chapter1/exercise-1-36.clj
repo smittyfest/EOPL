@@ -5,6 +5,9 @@
 ;; @@@@@@@@@@@@@@@@@@@@@@
 ;;
 ;; Write a procedure g such that number-elements from page 23
+;; could be defined as:
+;;
+;;
 (ns eopl.ch01 (:use clojure.test))
 
 (declare g)
