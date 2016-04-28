@@ -10,6 +10,8 @@
 ;;  (define number-elements
 ;;    (lambda (lst)
 ;;      (if (null? lst) '()
+;;        (g (list 0 (car lst)) (number-elements (cdr lst))))))
+;;
 (ns eopl.ch01 (:use clojure.test))
 
 (declare g)
