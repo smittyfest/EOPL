@@ -7,7 +7,9 @@
 ;; Write a procedure g such that number-elements from page 23
 ;; could be defined as:
 ;;
-;;
+;;  (define number-elements
+;;    (lambda (lst)
+;;      (if (null? lst) '()
 (ns eopl.ch01 (:use clojure.test))
 
 (declare g)
