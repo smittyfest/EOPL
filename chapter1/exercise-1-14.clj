@@ -11,8 +11,8 @@
 ;;
 ;; 2. Given that IH(k) holds, we wish to show that IH(k+1) holds also.
 ;;    Since 0 <= n < length(vec), we know that k+1 is not equal to 0
-;;    IH(k)   = v0 + v1 + ... + vk.
-;;    IH(k+1) = IH(k) + vk+1, 
+;;    IH(k)    = v0 + v1 + ... + vk.
+;;    IH(k+1)  = IH(k) + vk+1, 
 ;;    Since vk+1 is the value of v[k], IH(k) holds as well.
 ;;
 (ns eopl.ch01 (:use clojure.test))
