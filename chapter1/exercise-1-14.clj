@@ -10,7 +10,7 @@
 ;; 1. A Vector[Int] of length 0 has no elements, therefore IH(0) holds for the trivial case.
 ;;
 ;; 2. Given that IH(k) holds, we wish to show that IH(k+1) holds also.
-;;    Since 0 <= n < lenght(vec), we know that k+1 is not equal to 0
+;;    Since 0 <= n < length(vec), we know that k+1 is not equal to 0
 ;;    IH(k)   = v0 + v1 + ... + vk.
 ;;    IH(k+1) = IH(k) + vk+1, 
 ;;    Since vk+1 is the value of v[k], IH(k) holds as well.
